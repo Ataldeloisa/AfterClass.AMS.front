@@ -1,0 +1,226 @@
+.cadastro-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #e6f5e9;
+    padding: 20px;
+    position: relative;
+  }
+  
+  .cadastro-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    margin-top: 20px;
+    max-width: 400px;
+  }
+  
+  h2 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+  
+  .input-group {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  .form-input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #bbb;
+    border-radius: 20px;
+    background-color: #f0f0f0;
+    font-size: 16px;
+    outline: none;
+  }
+  
+  .form-input:focus {
+    border-color: #0077cc;
+  }
+  
+  .cadastrar-btn {
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .cadastrar-btn:hover {
+    background-color: #005fa3;
+  }
+  
+  .cadastrar-btn:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+  
+  .mensagem {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 4px;
+    width: 100%;
+    color: #333;
+  }
+  
+  .info-text {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #333;
+    max-width: 300px;
+    text-align: center;
+  }
+  
+  .cadastro-background {
+    background-image: url('../../assets/fcadastro.png'); /* atualize o caminho */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 60px;
+  }
+  
+  .cadastro-form-container {
+    background-color: rgba(255, 255, 255, 0.9); /* leve fundo branco translúcido */
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+  }
+  
+  .footer {
+    margin-top: auto;
+    text-align: center;
+    padding: 10px;
+    font-size: 12px;
+    color: #777;
+  }
+  
+  /* Estilo responsivo */
+  @media (min-width: 768px) {
+    .cadastro-container {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    
+    .cadastro-form-container {
+      flex: 1;
+      max-width: 50%;
+      padding-top: 70px;
+    }
+    
+    .navbar {
+      width: 100%;
+      height: 70px;
+      background-color: white;
+      display: flex;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    .navbar-content {
+      width: 100%;
+      padding: 0 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .navbar-content > div:first-child, 
+    .navbar-content > img:first-child {
+    margin-left: 0;
+    padding-left: 0;
+    }
+
+    .logo-section {
+      padding-left: 15px; /* Ajuste conforme necessário */
+    }
+    
+    
+    .logo {
+      height: 50px;
+      width: auto;
+      margin: 0;
+    }
+    
+    .menu {
+      display: flex;
+      gap: 30px;
+      margin-left: auto; /* ESSA LINHA faz os links irem pra direita */
+      align-items: center;
+    }    
+    
+    .menu a {
+      color: black; /* Links em preto por padrão */
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s;
+      padding: 6px 12px; /* Adicionando um padding para ter espaço para a sombra */
+      border-radius: 20px; /* Bordas arredondadas para a sombra */
+    }
+
+    .menu a:hover {
+      background-color: rgba(0, 102, 204, 0.1); /* Cor azul ao passar o mouse */
+    }
+    
+    .menu a.active-link {
+      color: #0066cc; /* Cor azul para link ativo */
+      background-color: rgba(0, 102, 204, 0.15); /* Fundo azul claro para indicar que está ativo */
+      box-shadow: 0 0 8px rgba(0, 102, 204, 0.5); /* Sombra azul em volta */
+    }
+    
+    .profile-icon {
+      color: #33333391;
+      cursor: pointer;
+      margin-left: 100px; /* Espaço entre os links e o ícone */
+      display: flex; /* Para centralizar melhor o ícone */
+      align-items: center;
+    }
+.navbar::after {
+  content: "";
+  position: absolute;
+  bottom: -4px; /* Posição abaixo da navbar */
+  left: 0;
+  width: 100%;
+  height: 9px; /* Altura total das duas linhas */
+  background: linear-gradient(to bottom, #0066cc 50%, #4CAF50 50%); /* Azul na metade superior, verde na metade inferior */
+}
+    .btn-cadastrar {
+      background-color: #c4ebd9;
+      color: #0077cc;
+      padding: 8px 20px;
+      border-radius: 20px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+    
+    .btn-cadastrar:hover {
+      background-color: #b2e0cd;
+    }
+
+    .footer{
+      position: absolute; /* Ou 'fixed' se quiser que ele fique visível mesmo ao rolar */
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 16px;
+      font-weight: bold;
+      color: rgba(224, 215, 173, 0.863); /* Cor preta com 50% de opacidade */
+      text-align: center;
+  
+    }
+    
+}

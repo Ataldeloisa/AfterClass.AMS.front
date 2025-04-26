@@ -1,0 +1,112 @@
+.Pag{
+    background-image: url("../../assets/p.webp");
+    background-color:rgb(60, 103, 219);
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+.Container {
+    width: 600px;
+    height: 550px; 
+    background-color: rgba(215, 219, 209, 0.699);
+    backdrop-filter: blur(1px);
+    border: 2px solid rgba(160, 157, 157, 0.582); 
+    border-radius: 40px; 
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    padding: 15px 40px;
+    gap: 15px;
+}
+.Logo-container{
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Container .input-field {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 8px;
+}
+.input-field input {
+    width: 450px;
+    height: 50px;
+    padding-left: 45px;
+    margin-bottom: 10PX;
+    outline: none;
+    border: 2px solid rgb(56, 55, 55);
+    border: 2px solid rgba(56, 55, 55, 0.384);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #831515;
+    background-color: rgba(227, 228, 227, 0.822);
+    padding: 0 20px;
+}
+.input-field input::placeholder {
+    color: #0f0f0f6c;
+}
+.input-field .icon {
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 15px;
+    color: #202020d5;
+    position: absolute;
+}
+.Container .recal-forget {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    color: #eeeded;
+    margin-top: -5px;
+}
+.recal-forget label {
+    color: #eeeded;
+}
+
+.recal-forget input {
+    margin-right: 5px;
+}
+.recal-forget a {
+    color: #eeeded;
+    text-decoration: none;
+}
+.recal-forget a:hover {
+    text-decoration: underline;
+}
+.Re-senha{
+    width: 32%;
+    display: block;
+    margin: 20px auto ;
+}
+.Container button {
+    width: 40%;
+    display: block;
+    margin: 20px auto ;
+    height: 50px;
+    background-color: #7088ca;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: aliceblue;
+    background-color: #3d3f60;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(247, 247, 247, 0.1);
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+
