@@ -145,6 +145,65 @@
     padding-left: 0;
     }
 
+   /* Correções específicas para o dropdown */
+
+/* Adicione isso ao seu arquivo CSS existente */
+
+/* Estilo para o botão dropdown */
+.dropbtn {
+  position: relative;
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s;
+  padding: 6px 12px;
+  border-radius: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  display: inline-block;
+}
+
+.dropbtn:hover {
+  background-color: rgba(0, 102, 204, 0.1);
+}
+
+
+.nav-item {
+  position: relative;
+}
+
+/* Seta do dropdown */
+.dropdown-arrow {
+  font-size: 12px;
+  margin-left: 3px;
+}
+
+.dropdown-content {
+  position: absolute;
+  top: 100%; 
+  left: 0;
+  background-color: #2b68b3;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1001; 
+  border-radius: 5px;
+  margin-top: 5px; 
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #3b7ad1;
+}
+
     .logo-section {
       padding-left: 15px; /* Ajuste conforme necessário */
     }

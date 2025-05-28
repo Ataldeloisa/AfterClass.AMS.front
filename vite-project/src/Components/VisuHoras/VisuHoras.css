@@ -1,0 +1,420 @@
+.Nav {
+  font-family: 'Arial', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.navbar {
+  width: 100%;
+  height: 70px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar-content {
+  width: 100%;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-content > div:first-child, 
+.navbar-content > img:first-child {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+/* Linha decorativa abaixo da navbar */
+.navbar::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 9px;
+  background: linear-gradient(to bottom, #0066cc 50%, #4CAF50 50%);
+}
+
+/* Logo */
+.logo-section {
+  padding-left: 15px;
+}
+
+.LogoAC {
+  height: 50px;
+  width: auto;
+  margin: 0;
+}
+
+/* Menu de navegação */
+.menu {
+  display: flex;
+  gap: 30px;
+  margin-left: auto;
+  align-items: center;
+}
+
+.menu a {
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s;
+  padding: 6px 12px;
+  border-radius: 20px;
+}
+
+.menu a:hover {
+  background-color: rgba(0, 102, 204, 0.1);
+}
+
+.menu a.active-link {
+  color: #0066cc;
+  background-color: rgba(0, 102, 204, 0.15);
+  box-shadow: 0 0 8px rgba(0, 102, 204, 0.5);
+}
+
+/* Dropdown de Turma */
+.nav-item {
+  position: relative;
+}
+
+.dropbtn {
+  position: relative;
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s;
+  padding: 6px 12px;
+  border-radius: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  display: inline-block;
+}
+
+.dropbtn:hover {
+  background-color: rgba(0, 102, 204, 0.1);
+}
+
+.dropdown-arrow {
+  font-size: 12px;
+  margin-left: 3px;
+}
+
+.dropdown-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #2b68b3;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1001;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.dropdown-content a {
+  color: white !important;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #3b7ad1;
+}
+
+/* Ícone de perfil e menu do usuário */
+.profile-icon {
+  color: #33333391;
+  cursor: pointer;
+  margin-left: 100px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.user-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  min-width: 180px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1001;
+  border-radius: 5px;
+  margin-top: 5px;
+  overflow: hidden;
+}
+
+.menu-header {
+  padding: 12px 16px;
+  font-weight: bold;
+  color: #333;
+  border-bottom: 1px solid #eee;
+}
+
+.menu-divider {
+  height: 1px;
+  background-color: #eee;
+}
+
+.menu-item {
+  padding: 12px 16px;
+  color: #333;
+  cursor: pointer;
+}
+
+.menu-item:hover {
+  background-color: #f5f5f5;
+}
+
+.menu-item.logout {
+  color: #ff3333;
+}
+
+.menu-item.logout:hover {
+  background-color: #fff0f0;
+}
+
+/* Overall Layout */
+.Nav {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #e0f2f1;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  width: 100%;
+  height: 60px;
+  border-bottom: 4px solid #03a9f4;
+}
+
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+}
+
+.LogoAC {
+  height: 40px;
+}
+
+/* Navigation Menu */
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 5px 10px;
+}
+
+.active-link {
+  color: #03a9f4 !important;
+  font-weight: bold !important;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.dropbtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 5px 10px;
+}
+
+.dropdown-arrow {
+  margin-left: 5px;
+}
+
+.dropdown-content {
+  position: absolute;
+  background-color:#2b68b3;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  border-radius: 4px;
+}
+
+.dropdown-content a {
+  color: #333;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ffffff;
+}
+
+/* User Menu */
+.profile-icon {
+  position: relative;
+}
+
+.avatar {
+  cursor: pointer;
+  color: #777;
+}
+
+.user-menu {
+  position: absolute;
+  right: 0;
+  top: 45px;
+  background-color: rgb(255, 255, 255);
+  min-width: 180px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  border-radius: 4px;
+}
+
+.menu-header {
+  padding: 12px 16px;
+  font-weight: bold;
+}
+
+.menu-divider {
+  height: 1px;
+  background-color: #c0b3b3;
+}
+
+.menu-item {
+  padding: 12px 16px;
+  cursor: pointer;
+}
+
+.logout {
+  color: #f44336;
+}
+
+.page-container {
+  padding-top: 120px; 
+  padding-left: 50px;
+  padding-right: 50px;
+  background: linear-gradient(to bottom, #e0f7fa, #c8e6c9);
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+
+.header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.linha-topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+  padding: 0 5%;
+}
+
+.titulo-Horas {
+  font-size: 34px;
+  text-align: center;
+  margin: 0;
+  padding-left: 50px;
+}
+
+.botoes {
+  display: flex;
+  gap: 30px;
+  margin-top: 10px;
+}
+
+.action-button {
+  background-color: #03a9f4;
+  color: rgb(70, 112, 190);
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition:  0.3s;
+}
+
+.action-button:hover {
+  background-color: #0288d1;
+}
+
+.tabela-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.tabela-Horas {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.tabela-Horas th {
+  background-color: #f9f9f9;
+  padding: 10px;
+  border: 1px solid #ddd;
+  font-weight: bold;
+}
+
+.tabela-Horas td {
+  padding: 8px;
+  border: 1px solid #ddd;
+}
+
+.row-light {
+  background-color: #c6faca;
+}
+
+.row-dark {
+  background-color: #c2dfe4;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .botoes {
+    flex-direction: column;
+  }
+  
+  .titulo-Horas {
+    text-align: center;
+  }
+}

@@ -17,7 +17,6 @@ function Homeprof() {
 
   return (
     <div className="dashboard">
-      {/* Header */}
       <header className="navbar">
         <div className="logo-section">
                  <img src={LogoAC} alt="LogoAC" className="LogoAC" />

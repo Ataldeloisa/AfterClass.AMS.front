@@ -68,6 +68,25 @@
     gap: 50px;
     margin-left: 420px;
   }
+
+  .nav-menu a {
+    color: black; /* Links em preto por padrão */
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s;
+    padding: 6px 12px; /* Adicionando um padding para ter espaço para a sombra */
+    border-radius: 20px; /* Bordas arredondadas para a sombra */
+  }
+
+  .nav-menu a:hover {
+    background-color: rgba(0, 102, 204, 0.1); /* Cor azul ao passar o mouse */
+  }
+  
+  .nav-menu a.active-link {
+    color: #0066cc; /* Cor azul para link ativo */
+    background-color: rgba(0, 102, 204, 0.15); /* Fundo azul claro para indicar que está ativo */
+    box-shadow: 0 0 8px rgba(0, 102, 204, 0.5); /* Sombra azul em volta */
+  }
   .navbar::after {
     content: "";
     position: right;
@@ -90,10 +109,10 @@
     font-family: inherit;
   }
   
-  .nav-item.active {
-    background-color: #f0f0f0;
+  /* .nav-item.active {
+    background-color: #6783ad57;
   }
-  
+   */
   .dropdown {
     position: relative;
     display: inline-block;
