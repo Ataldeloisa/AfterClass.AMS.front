@@ -1,4 +1,4 @@
-.Pag{
+.Pag-Login{
     background-image: url("../../assets/p.webp");
     background-color:rgb(60, 103, 219);
     display: flex;
@@ -8,7 +8,7 @@
     background-size: cover;
     background-position: center;
 }
-.Container {
+.Container-Login{
     width: 600px;
     height: 550px; 
     background-color: rgba(215, 219, 209, 0.699);
@@ -22,12 +22,97 @@
     gap: 15px;
 }
 .Logo-container{
-    margin-bottom: 100px;
+    margin-bottom: 60px; /* Reduzido para dar espaço ao toggle */
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.Container .input-field {
+
+/* Estilos do Toggle Switch */
+.user-type-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+.toggle-label {
+    font-size: 16px;
+    font-weight: 500;
+    color: rgba(238, 238, 238, 0.7);
+    transition: all 0.3s ease;
+    user-select: none;
+}
+
+.toggle-label.active {
+    color: #494848;
+    font-weight: 600;
+    text-shadow: 0 0 8px rgba(238, 238, 238, 0.3);
+}
+
+.toggle-switch {
+    width: 80px;
+    height: 40px;
+    background-color: rgba(227, 228, 227, 0.4);
+    border-radius: 25px;
+    border: 2px solid rgba(56, 55, 55, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.toggle-switch:hover {
+    background-color: rgba(227, 228, 227, 0.6);
+    border-color: rgba(56, 55, 55, 0.5);
+}
+
+.toggle-slider {
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.toggle-slider.aluno {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.toggle-slider.professor {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.toggle-circle {
+    width: 32px;
+    height: 32px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.toggle-slider.professor .toggle-circle {
+    transform: translateX(40px);
+}
+
+.toggle-circle:before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    top: 6px;
+    left: 6px;
+    background: linear-gradient(135deg, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.4) 100%);
+}
+
+.Container-Login .input-field {
     width: 100%;
     display: flex;
     align-items: center;
@@ -53,14 +138,14 @@
     color: #0f0f0f6c;
 }
 .input-field .icon {
-    right: 20px;
-    top: 50%;
+    right: 10px;
+    top: 45%;
     transform: translateY(-50%);
     font-size: 15px;
     color: #202020d5;
     position: absolute;
 }
-.Container .recal-forget {
+.Container-Login .recal-forget {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -87,7 +172,7 @@
     display: block;
     margin: 20px auto ;
 }
-.Container button {
+.Container-Login button {
     width: 40%;
     display: block;
     margin: 20px auto ;
@@ -108,5 +193,3 @@
     font-weight: 600;
     margin-top: 20px;
 }
-
-

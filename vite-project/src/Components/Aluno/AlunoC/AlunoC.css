@@ -1,10 +1,13 @@
+/* Navbar */
 .Nav {
   font-family: 'Arial', sans-serif;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background-color: #e0f2f1;
+  /* Adicionando espaçamento para a navbar fixa */
+  padding-top: 80px;
 }
-
 
 .navbar {
   width: 100%;
@@ -44,7 +47,6 @@
   background: linear-gradient(to bottom, #0066cc 50%, #4CAF50 50%);
 }
 
-/* Logo */
 .logo-section {
   padding-left: 15px;
 }
@@ -55,7 +57,6 @@
   margin: 0;
 }
 
-/* Menu de navegação */
 .menu {
   display: flex;
   gap: 30px;
@@ -176,245 +177,115 @@
   background-color: #eee;
 }
 
-.menu-item {
-  padding: 12px 16px;
-  color: #333;
-  cursor: pointer;
-}
-
-.menu-item:hover {
-  background-color: #f5f5f5;
-}
-
 .menu-item.logout {
-  color: #ff3333;
+  color: #dc3545 !important;
 }
 
 .menu-item.logout:hover {
-  background-color: #fff0f0;
+  color: #c82333 !important;
+  background-color: rgba(220, 53, 69, 0.1) !important;
 }
 
-/* Overall Layout */
-.Nav {
-  width: 100%;
-  min-height: 100vh;
-  background-color: #e0f2f1;
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: white;
-  width: 100%;
-  height: 60px;
-  border-bottom: 4px solid #03a9f4;
-}
-
-.navbar-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  padding: 0 20px;
-}
-
-.logo-section {
-  display: flex;
-  align-items: center;
-}
-
-.LogoAC {
-  height: 40px;
-}
-
-/* Navigation Menu */
-.menu {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.menu a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  padding: 5px 10px;
-}
-
-.active-link {
-  color: #03a9f4 !important;
-  font-weight: bold !important;
-}
-
-.nav-item {
-  position: relative;
-}
-
-.dropbtn {
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: 500;
-  padding: 5px 10px;
-}
-
-.dropdown-arrow {
-  margin-left: 5px;
-}
-
-.dropdown-content {
-  position: absolute;
-  background-color:#2b68b3;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
-  z-index: 1;
-  border-radius: 4px;
-}
-
-.dropdown-content a {
-  color: #333;
-  padding: 12px 16px;
-  text-decoration: none;
+.user-menu .menu-item {
+  color: #333 !important;
+  text-decoration: none !important;
   display: block;
-}
-
-.dropdown-content a:hover {
-  background-color: #ffffff;
-}
-
-/* User Menu */
-.profile-icon {
-  position: relative;
-}
-
-.avatar {
-  cursor: pointer;
-  color: #777;
-}
-
-.user-menu {
-  position: absolute;
-  right: 0;
-  top: 45px;
-  background-color: rgb(255, 255, 255);
-  min-width: 180px;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
-  z-index: 1;
-  border-radius: 4px;
-}
-
-.menu-header {
-  padding: 12px 16px;
-  font-weight: bold;
-}
-
-.menu-divider {
-  height: 1px;
-  background-color: #c0b3b3;
-}
-
-.menu-item {
   padding: 12px 16px;
   cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-.logout {
-  color: #f44336;
+.user-menu .menu-item:hover {
+  background-color: #f5f5f5;
 }
+
 
 .page-container {
-  padding-top: 120px; 
-  padding-left: 50px;
-  padding-right: 50px;
-  background: linear-gradient(to bottom, #e0f7fa, #c8e6c9);
-  min-height: 100vh;
-  font-family: Arial, sans-serif;
+  padding-top: 100px;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
-
-.header-section {
+.tabelas-container {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 20px;
-}
-
-.linha-topo {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 50px;
-  padding: 0 5%;
-}
-
-.titulo-Horas {
-  font-size: 34px;
-  text-align: center;
-  margin: 0;
-  padding-left: 50px;
-}
-
-.botoes {
-  display: flex;
+  flex-direction: column;
   gap: 30px;
-  margin-top: 10px;
+  width: 100%;
 }
 
-.action-button {
-  background-color: #03a9f4;
-  color: rgb(70, 112, 190);
-  border: none;
-  border-radius: 4px;
-  padding: 10px 20px;
-  cursor: pointer;
-  font-weight: bold;
-  transition:  0.3s;
+/* Títulos */
+.linha-topoA,
+.linha-topoNotas {
+  text-align: left;
 }
 
-.action-button:hover {
-  background-color: #0288d1;
+.titulo-HorasA,
+.titulo-Notas {
+  font-size: 32px;
+  color: #0f0f0f;
 }
 
+/* Tabela de Horas */
 .tabela-container {
   width: 100%;
   overflow-x: auto;
 }
 
-.tabela-Horas {
+.tabela-HorasA {
   width: 100%;
   border-collapse: collapse;
   text-align: center;
 }
 
-.tabela-Horas th {
+.tabela-HorasA th {
+  background-color: #4ec437;
+  color: white;
+  padding: 12px 8px;
+  border: 1px solid #fff;
+  font-size: 14px;
+}
+
+.tabela-HorasA td {
+  padding: 12px 8px;
+  border: 1px solid #eee;
+  font-size: 14px;
+  background-color: #fff;
+}
+
+/* Tabela de Notas */
+.notas-box {
+  width: 100%;
+  max-width: 600px;
+}
+
+.notas-tabela {
+  border-collapse: collapse;
+  font-size: 16px;
   background-color: #f9f9f9;
-  padding: 10px;
+  width: 100%;
+}
+
+.notas-tabela th,
+.notas-tabela td {
   border: 1px solid #ddd;
+  padding: 12px 15px;
+  text-align: center;
+}
+
+.notas-tabela th {
+  background-color: #4ec437;
+  color: white;
   font-weight: bold;
 }
 
-.tabela-Horas td {
-  padding: 8px;
-  border: 1px solid #ddd;
-}
-
-.row-light {
-  background-color: #c6faca;
-}
-
-.row-dark {
-  background-color: #c2dfe4;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  .botoes {
-    flex-direction: column;
-  }
-  
-  .titulo-Horas {
-    text-align: center;
-  }
+.ano-select {
+  font-size: 14px;
+  padding: 8px 12px;
+  background-color: #4ec437;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  font-weight: bold;
 }

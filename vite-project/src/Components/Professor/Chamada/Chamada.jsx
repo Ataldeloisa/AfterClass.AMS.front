@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "./Chamada.css";
-import LogoAC from '../../assets/LogoAC.png';
+import LogoAC from '../../../assets/LogoAC.png';
 import { FaUserCircle } from 'react-icons/fa';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 
 export default function Chamada() {
   // Estado para lista de alunos
@@ -20,6 +20,8 @@ export default function Chamada() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [userMenuOpen, setUserMenuOpen] = useState(false);
   
+  const navigate = useNavigate();
+  
   const toggleDropdown = () => {
     setDropdownOpen(!dropdownOpen);
   };
@@ -34,6 +36,18 @@ export default function Chamada() {
     setPresencas(novasPresencas);
   };
 
+  const handleVisualizarHoras = () => {
+    navigate('/VisuHoras');
+  };
+
+  const handleMaisHoras = () => {
+    navigate('/HorasAdc');
+  };
+   const handleVisualizarNotas = () => {
+    navigate('/VisuNotas');
+  };
+
+
   return (
     <div className='Nav'>
       <header className="navbar">
@@ -42,7 +56,7 @@ export default function Chamada() {
             <img src={LogoAC} alt="LogoAC" className="LogoAC" />
           </div>
           <nav className="menu">
-            <NavLink to="/" end className={({isActive}) => isActive ? 'active-link' : ''}>Home</NavLink>
+            <NavLink to="/Homeprof" className={({isActive}) => isActive ? 'active-link' : ''}>Home</NavLink>
           
             <div className="nav-item">
               <button className="dropbtn" onClick={toggleDropdown}>
@@ -50,7 +64,7 @@ export default function Chamada() {
               </button>
               {dropdownOpen && (
                 <div className="dropdown-content">
-                  <a href="#">1 ANO - AMS</a>
+                  <NavLink to="/Chamada">1 ANO - AMS</NavLink>
                   <a href="#">2 ANO - AMS</a>
                   <a href="#">3 ANO - AMS</a>
                 </div>
@@ -58,20 +72,23 @@ export default function Chamada() {
             </div>
             
             <NavLink to="/calendario" className={({isActive}) => isActive ? 'active-link' : ''}>Calendário</NavLink>
-            <NavLink to="/cadastro" className={({isActive}) => isActive ? 'active-link' : ''}>Cadastrar</NavLink>
+            <NavLink to="/Cadastro" className={({isActive}) => isActive ? 'active-link' : ''}>Cadastrar</NavLink>
           </nav>
           <div className="profile-icon">
             <div className="avatar" onClick={toggleUserMenu}>
               <FaUserCircle size={40} />
             </div>
             {userMenuOpen && (
-              <div className="user-menu">
-                <div className="menu-header">Email</div>
-                <div className="menu-divider"></div>
-                <div className="menu-item">Troca de senha</div>
-                <div className="menu-divider"></div>
-                <div className="menu-item logout">sair</div>
-              </div>
+             <div className="user-menu">
+                                       <div className="menu-divider"></div>
+                                       <NavLink to="/TrocarSenha" className="menu-item" onClick={() => setUserMenuOpen(false)}>
+                                         Troca de senha
+                                       </NavLink>
+                                       <div className="menu-divider"></div>
+                                       <NavLink to="/" className="menu-item logout" onClick={() => setUserMenuOpen(false)}>
+                                         Sair
+                                       </NavLink>
+                                     </div>
             )}
           </div>
         </div>
@@ -81,9 +98,9 @@ export default function Chamada() {
         <div className="linha-topo">
           <h2 className="titulo-chamada">1º ano<br />Chamada</h2>
           <div className="botoes">
-            <button onClick={() => window.location.href = "/horas"}>Visualizar Horas</button>
-            <button onClick={() => window.location.href = "/mais-horas"}>+Horas</button>
-            <button onClick={() => window.location.href = "/notas"}>+Notas</button>
+            <button onClick={handleVisualizarHoras}>Visualizar Horas</button>
+            <button onClick={handleMaisHoras}>+Horas</button>
+             <button onClick={handleVisualizarNotas}>+Notas</button>
           </div>
         </div>
         

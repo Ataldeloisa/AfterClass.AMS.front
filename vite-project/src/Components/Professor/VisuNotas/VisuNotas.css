@@ -4,8 +4,6 @@
   display: flex;
   flex-direction: column;
 }
-
-
 .navbar {
   width: 100%;
   height: 70px;
@@ -175,170 +173,28 @@
   height: 1px;
   background-color: #eee;
 }
-
-.menu-item {
-  padding: 12px 16px;
-  color: #333;
-  cursor: pointer;
-}
-
-.menu-item:hover {
-  background-color: #f5f5f5;
-}
-
 .menu-item.logout {
-  color: #ff3333;
+  color: #dc3545; /* Vermelho mais suave */
 }
 
 .menu-item.logout:hover {
-  background-color: #fff0f0;
+  color: #c82333; /* Vermelho mais escuro no hover */
+  background-color: rgba(220, 53, 69, 0.1); /* Fundo vermelho claro no hover */
 }
 
-/* Overall Layout */
-.Nav {
-  width: 100%;
-  min-height: 100vh;
-  background-color: #e0f2f1;
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: white;
-  width: 100%;
-  height: 60px;
-  border-bottom: 4px solid #03a9f4;
-}
-
-.navbar-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  padding: 0 20px;
-}
-
-.logo-section {
-  display: flex;
-  align-items: center;
-}
-
-.LogoAC {
-  height: 40px;
-}
-
-/* Navigation Menu */
-.menu {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.menu a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  padding: 5px 10px;
-}
-
-.active-link {
-  color: #03a9f4 !important;
-  font-weight: bold !important;
-}
-
-.nav-item {
-  position: relative;
-}
-
-.dropbtn {
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: 500;
-  padding: 5px 10px;
-}
-
-.dropdown-arrow {
-  margin-left: 5px;
-}
-
-.dropdown-content {
-  position: absolute;
-  background-color:#2b68b3;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
-  z-index: 1;
-  border-radius: 4px;
-}
-
-.dropdown-content a {
-  color: #333;
-  padding: 12px 16px;
+.user-menu .menu-item {
+  color: inherit;
   text-decoration: none;
   display: block;
 }
 
-.dropdown-content a:hover {
-  background-color: #ffffff;
-}
-
-/* User Menu */
-.profile-icon {
-  position: relative;
-}
-
-.avatar {
-  cursor: pointer;
-  color: #777;
-}
-
-.user-menu {
-  position: absolute;
-  right: 0;
-  top: 45px;
-  background-color: rgb(255, 255, 255);
-  min-width: 180px;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
-  z-index: 1;
-  border-radius: 4px;
-}
-
-.menu-header {
-  padding: 12px 16px;
-  font-weight: bold;
-}
-
-.menu-divider {
-  height: 1px;
-  background-color: #c0b3b3;
-}
-
-.menu-item {
-  padding: 12px 16px;
-  cursor: pointer;
-}
-
-.logout {
-  color: #f44336;
-}
-
-.page-container {
+.VisuNotas-container {
   padding-top: 120px; 
   padding-left: 50px;
   padding-right: 50px;
   background: linear-gradient(to bottom, #e0f7fa, #c8e6c9);
   min-height: 100vh;
   font-family: Arial, sans-serif;
-}
-
-
-.header-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 20px;
 }
 
 .linha-topo {
@@ -349,7 +205,7 @@
   padding: 0 5%;
 }
 
-.titulo-Horas {
+.titulo-VisuNotas {
   font-size: 34px;
   text-align: center;
   margin: 0;
@@ -362,59 +218,39 @@
   margin-top: 10px;
 }
 
-.action-button {
-  background-color: #03a9f4;
-  color: rgb(70, 112, 190);
+.botoes button {
+  background-color: #2196f3;
+  color: white;
+  padding: 16px 40px;
   border: none;
-  border-radius: 4px;
-  padding: 10px 20px;
+  border-radius: 17px;
+  font-size: 16px;
   cursor: pointer;
-  font-weight: bold;
-  transition:  0.3s;
+  transition: background-color 0.3s;
+  margin-top: 10px;
 }
 
-.action-button:hover {
-  background-color: #0288d1;
+.botoes button:hover {
+  background-color: #1976d2;
 }
 
-.tabela-container {
-  width: 100%;
-  overflow-x: auto;
-}
-
-.tabela-Horas {
-  width: 100%;
+table {
+  margin: 0 auto;
   border-collapse: collapse;
-  text-align: center;
+  width: 45%;
+  background-color: rgba(228, 227, 227, 0.85);
 }
 
-.tabela-Horas th {
-  background-color: #f9f9f9;
-  padding: 10px;
-  border: 1px solid #ddd;
-  font-weight: bold;
+th, td {
+  padding: 15px;
+  border: 1px solid #f1f1f1;
 }
 
-.tabela-Horas td {
-  padding: 8px;
-  border: 1px solid #ddd;
+tr:nth-child(odd) {
+  background-color: #e6ffe6;
 }
 
-.row-light {
-  background-color: #c6faca;
-}
-
-.row-dark {
-  background-color: #c2dfe4;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  .botoes {
-    flex-direction: column;
-  }
-  
-  .titulo-Horas {
-    text-align: center;
-  }
+.footer {
+  margin-top: 50px;
+  font-size: 0.9em;
 }

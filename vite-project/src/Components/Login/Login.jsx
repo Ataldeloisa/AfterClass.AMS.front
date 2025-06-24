@@ -9,22 +9,45 @@ function Login() {
 
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [userType, setUserType] = useState('aluno'); 
 
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    alert('Login efetuado com: ' + username + ' - ' + password);
+    alert(`Login efetuado como ${userType}: ${username} - ${password}`);
     
-    navigate('/Homeprof');
+    if (userType === 'professor') {
+      navigate('/Homeprof');
+    } else {
+      navigate('/Homealuno');
+    }
+  };
+
+  const toggleUserType = () => {
+    setUserType(userType === 'aluno' ? 'professor' : 'aluno');
   };
 
   return ( 
-  <div className='Pag'> 
-    <div className='Container'>
+  <div className='Pag-Login'> 
+    <div className='Container-Login'>
       <form onSubmit={handleSubmit}>
         <div className="Logo-container">
           <img src={LogoAC} alt="LogoAC" className="LogoAC" />
         </div>
+        <div className='user-type-toggle'>
+          <span className={`toggle-label ${userType === 'aluno' ? 'active' : ''}`}>
+            Aluno
+          </span>
+          <div className='toggle-switch' onClick={toggleUserType}>
+            <div className={`toggle-slider ${userType === 'professor' ? 'professor' : 'aluno'}`}>
+              <div className='toggle-circle'></div>
+            </div>
+          </div>
+          <span className={`toggle-label ${userType === 'professor' ? 'active' : ''}`}>
+            Professor
+          </span>
+        </div>
+
         <div className='input-field'>
           <input
             type='email'
@@ -50,7 +73,7 @@ function Login() {
         </div>
         <button type='submit'>Entrar</button>
         <div className='Re-senha'>
-          <a href='#'>Esqueceu a senha?</a>
+          <a href='/TrocarSenha'>Esqueceu a senha?</a>
         </div>
       </form>
     </div>
@@ -59,4 +82,3 @@ function Login() {
 }
 
 export default Login;
-

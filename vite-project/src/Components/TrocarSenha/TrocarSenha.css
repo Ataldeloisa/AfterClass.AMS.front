@@ -1,0 +1,88 @@
+.Pag-Senha {
+    background-image: url("../../assets/Ts.png");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.Container-Senha{
+    width: 600px;
+    height: 500px;
+    background-color: rgba(215, 219, 209, 0.699);
+    backdrop-filter: blur(1px);
+    border: 2px solid rgba(231, 229, 229, 0.897);
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 40px;
+    gap: 15px;
+}
+
+.Logo-container {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Container h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.input-field {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.input-field input {
+    width: 450px;
+    height: 50px;
+    padding: 0 20px;
+    outline: none;
+    border: 2px solid rgba(56, 55, 55, 0.384);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #333;
+    background-color: rgba(227, 228, 227, 0.822);
+    margin-bottom: 10px;
+    transition: border-color 0.3s ease;
+}
+
+.input-field input:focus {
+    border-color: #3d3f60;
+}
+
+.input-field input::placeholder {
+    color: rgba(15, 15, 15, 0.4);
+}
+
+.Container-Senha button {
+    width: 40%;
+    height: 50px;
+    background-color: #3d3f60;
+    color: aliceblue;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(247, 247, 247, 0.1);
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 20px auto;
+    display: block;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.Container-Senha button:hover {
+    background-color: #5961a8;
+    transform: scale(1.05);
+}
+

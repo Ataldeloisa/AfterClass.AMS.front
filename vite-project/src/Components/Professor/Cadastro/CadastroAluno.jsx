@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { FaUserCircle } from 'react-icons/fa';
 import { NavLink } from 'react-router-dom';
 import './CadastroAluno.css';
-import LogoAC from '../../assets/LogoAC.png';
+import LogoAC from '../../../assets/LogoAC.png';
 
 function CadastroAluno() {
   
@@ -69,21 +69,21 @@ function CadastroAluno() {
             <img src={LogoAC} alt="LogoAC" className="LogoAC" />
           </div>
           <nav className="menu">
-            <NavLink to="/" end className={({isActive}) => isActive ? 'active-link' : ''}>Home</NavLink>
+            <NavLink to="/Homeprof" className={({isActive}) => isActive ? 'active-link' : ''}>Home</NavLink>
             <div className="nav-item">
               <button className="dropbtn" onClick={toggleDropdown}>
                 Turma <span className="dropdown-arrow">v</span>
               </button>
               {dropdownOpen && (
                 <div className="dropdown-content">
-                  <a href="#">1 ANO - AMS</a>
+                  <NavLink to="/Chamada">1 ANO - AMS</NavLink>
                   <a href="#">2 ANO - AMS</a>
                   <a href="#">3 ANO - AMS</a>
                 </div>
               )}
             </div>
             <NavLink to="/calendario" className={({isActive}) => isActive ? 'active-link' : ''}>Calendário</NavLink>
-            <NavLink to="/cadastro" className={({isActive}) => isActive ? 'active-link' : ''}>Cadastrar</NavLink>
+            <NavLink to="/Cadastro" className={({isActive}) => isActive ? 'active-link' : ''}>Cadastrar</NavLink>
           </nav>
           <div className="profile-icon">
             <div className="avatar" onClick={toggleUserMenu}>
@@ -91,12 +91,15 @@ function CadastroAluno() {
             </div>
             {userMenuOpen && (
               <div className="user-menu">
-                <div className="menu-header">Email</div>
-                <div className="menu-divider"></div>
-                <div className="menu-item">Troca de senha</div>
-                <div className="menu-divider"></div>
-                <div className="menu-item logout">sair</div>
-              </div>
+                                        <div className="menu-divider"></div>
+                                        <NavLink to="/TrocarSenha" className="menu-item" onClick={() => setUserMenuOpen(false)}>
+                                          Troca de senha
+                                        </NavLink>
+                                        <div className="menu-divider"></div>
+                                        <NavLink to="/" className="menu-item logout" onClick={() => setUserMenuOpen(false)}>
+                                          Sair
+                                        </NavLink>
+                                      </div>
             )}
           </div>
         </div>

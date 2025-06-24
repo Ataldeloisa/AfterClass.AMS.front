@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import "./HorasAdc.css";
-import LogoAC from '../../assets/LogoAC.png';
-import { FaUserCircle } from 'react-icons/fa';
-import { NavLink } from 'react-router-dom';
+import LogoAC from "../../../assets/LogoAC.png";
+import { FaUserCircle } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
 
 function HorasAdc() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [userMenuOpen, setUserMenuOpen] = useState(false);
-  
+
   const toggleDropdown = () => {
     setDropdownOpen(!dropdownOpen);
   };
@@ -16,7 +16,6 @@ function HorasAdc() {
     setUserMenuOpen(!userMenuOpen);
   };
 
-  // Sample student data based on the first image
   const studentData = [
     {
       nome: "Julia",
@@ -29,7 +28,7 @@ function HorasAdc() {
       ano1: 65,
       ano2: 61,
       ano3: 76,
-      total: 202
+      total: 202,
     },
     {
       nome: "Letícia",
@@ -42,34 +41,50 @@ function HorasAdc() {
       ano1: 65,
       ano2: 68,
       ano3: 72,
-      total: 205
-    }
+      total: 205,
+    },
   ];
 
   return (
-    <div className='Nav'>
+    <div className="Nav">
       <header className="navbar">
         <div className="navbar-content">
           <div className="logo-section">
             <img src={LogoAC} alt="LogoAC" className="LogoAC" />
           </div>
           <nav className="menu">
-            <NavLink to="/" end className={({isActive}) => isActive ? 'active-link' : ''}>Home</NavLink>
+            <NavLink
+              to="/Homeprof"
+              end
+              className={({ isActive }) => (isActive ? "active-link" : "")}
+            >
+              Home
+            </NavLink>
             <div className="nav-item">
               <button className="dropbtn" onClick={toggleDropdown}>
                 Turma <span className="dropdown-arrow">v</span>
               </button>
               {dropdownOpen && (
                 <div className="dropdown-content">
-                  <a href="#">1 ANO - AMS</a>
+                  <NavLink to="/Chamada">1 ANO - AMS</NavLink>
                   <a href="#">2 ANO - AMS</a>
                   <a href="#">3 ANO - AMS</a>
                 </div>
               )}
             </div>
-            
-            <NavLink to="/calendario" className={({isActive}) => isActive ? 'active-link' : ''}>Calendário</NavLink>
-            <NavLink to="/cadastro" className={({isActive}) => isActive ? 'active-link' : ''}>Cadastrar</NavLink>
+
+            <NavLink
+              to="/calendario"
+              className={({ isActive }) => (isActive ? "active-link" : "")}
+            >
+              Calendário
+            </NavLink>
+            <NavLink
+              to="/cadastrarAluno"
+              className={({ isActive }) => (isActive ? "active-link" : "")}
+            >
+              Cadastrar
+            </NavLink>
           </nav>
           <div className="profile-icon">
             <div className="avatar" onClick={toggleUserMenu}>
@@ -77,11 +92,22 @@ function HorasAdc() {
             </div>
             {userMenuOpen && (
               <div className="user-menu">
-                <div className="menu-header">Email</div>
                 <div className="menu-divider"></div>
-                <div className="menu-item">Troca de senha</div>
+                <NavLink
+                  to="/TrocarSenha"
+                  className="menu-item"
+                  onClick={() => setUserMenuOpen(false)}
+                >
+                  Troca de senha
+                </NavLink>
                 <div className="menu-divider"></div>
-                <div className="menu-item logout">sair</div>
+                <NavLink
+                  to="/"
+                  className="menu-item logout"
+                  onClick={() => setUserMenuOpen(false)}
+                >
+                  Sair
+                </NavLink>
               </div>
             )}
           </div>
@@ -89,15 +115,25 @@ function HorasAdc() {
       </header>
 
       <div className="page-container">
-          <div className="linha-topo">
-          <h2 className="titulo-Horas">1º ano<br />+Horas</h2>
+        <div className="linha-topo">
+          <h2 className="titulo-Horas">
+            1º ano
+            <br />
+            +Horas
+          </h2>
           <div className="botoes">
-            <button onClick={() => window.location.href = "/horas"}>Horas Adicionais</button>
-            <button onClick={() => window.location.href = "/mais-horas"}>Chamada</button>
-            <button onClick={() => window.location.href = "/notas"}>+Notas</button>
+            <button onClick={() => (window.location.href = "/VisuHoras")}>
+              Visualizar Horas
+            </button>
+            <button onClick={() => (window.location.href = "/Chamada")}>
+              Chamada
+            </button>
+            <button onClick={() => (window.location.href = "/VisuNotas")}>
+              +Notas
+            </button>
           </div>
         </div>
-        
+
         <div className="tabela-container">
           <table className="tabela-Horas">
             <thead>
@@ -117,7 +153,10 @@ function HorasAdc() {
             </thead>
             <tbody>
               {studentData.map((student, index) => (
-                <tr key={index} className={index % 2 === 0 ? 'row-light' : 'row-dark'}>
+                <tr
+                  key={index}
+                  className={index % 2 === 0 ? "row-light" : "row-dark"}
+                >
                   <td>{student.nome}</td>
                   <td>{student.mentoria}</td>
                   <td>{student.palestra}</td>
